@@ -48,6 +48,22 @@
     </header>
     <section>
         <div class="container">
+            <h2>Contact</h2>
+            <p>Feel free to reach out via <a href="mailto:your@email.com">email</a>.</p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+</body>
+</html>
+<body>
+    <header>
+        <h1>$CRYPTO</h1>
+        <p>There's a ticker for bitcoin but not crypto, make that make sense... $CRYPTO is the people's coin. Just wait until you can flex that $CRYPTO changed your life</p>
+    </header>
+    <section>
+        <div class="container">
             <h2>About Me</h2>
             <p>Hello! I'm a developer sharing my projects and ideas on GitHub.</p>
             <h2>Portfolio</h2>
