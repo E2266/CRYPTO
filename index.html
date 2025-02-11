@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color: #0d1b0d;
+            background-color: #ffffff;
             color: #d4edda;
         }
         header {
@@ -39,7 +39,7 @@
             border-radius: 8px;
             margin: 20px auto;
             width: fit-content;
-            box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+            box-shadow: 0 0 30px rgba(40, 167, 69, 1);
             color: #ffffff;
         }
         .contract-address {
@@ -64,7 +64,7 @@
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 15px;
+            margin-top: 20px;
         }
         .social-links a {
             text-decoration: none;
@@ -73,13 +73,56 @@
             width: 30px;
             height: 30px;
         }
+        .social-links-container {
+            background: #f0f0f0;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .image-slider {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            background: #ddd;
+            padding: 20px 0;
+            position: relative;
+        }
+        .image-slider img {
+            width: 150px;
+            height: auto;
+            margin: 0 10px;
+            display: inline-block;
+            animation: scrollImages 10s linear infinite;
+        }
+        @keyframes scrollImages {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
         footer {
             background: #28a745;
             color: white;
             padding: 10px;
-            position: fixed;
+            position: relative;
             width: 100%;
             bottom: 0;
+        }
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .contract-address {
+                font-size: 1em;
+            }
+            .copy-btn {
+                font-size: 0.9em;
+                padding: 6px 10px;
+            }
+            .image-slider img {
+                width: 100px;
+            }
         }
     </style>
     <script>
@@ -100,6 +143,9 @@
     <section class="contract-section">
         <p class="contract-address" id="contractAddress">Contract Address: 9huESYrXtsdx4gGLHxrSZ9Uta3sN2SKZUYux5ZVpump</p>
         <button class="copy-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+    </section>
+    
+    <div class="social-links-container">
         <div class="social-links">
             <a href="https://t.me/yourtelegramlink" target="_blank">
                 <img src="telegram.png" alt="Telegram">
@@ -108,7 +154,15 @@
                 <img src="x.png" alt="X">
             </a>
         </div>
-    </section>
+    </div>
+    
+    
+        <img src="image1.png" alt="Image 1">
+        <img src="image2.png" alt="Image 2">
+        <img src="image3.png" alt="Image 3">
+        <img src="image4.png" alt="Image 4">
+        <img src="image5.png" alt="Image 5">
+    </div>
     
     <footer>
         <p>&copy; 2024 Your Name</p>
