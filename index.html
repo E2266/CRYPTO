@@ -79,11 +79,6 @@
             margin: 0;
             display: inline-block;
             animation: scrollImages 20s linear infinite;
-        } /* Doubled size */
-            width: auto;
-            margin: 0;
-            display: block;
-            animation: scrollImages 10s linear infinite;
         }
         @keyframes scrollImages {
             0% {
@@ -93,44 +88,10 @@
                 transform: translateX(-100vw);
             }
         }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-            100% {
-                transform: translateX(-100vw);
-            }
-        }
-            100% {
-                transform: translateX(-100vw);
-            }
-        }
-        
-        .image-slider img {
-            height: 300px;
-            width: auto;
-            margin: 0;
-            display: block;
-            animation: scrollImages 20s linear infinite; /* Slower animation */
-        }
-        
         @media screen and (max-width: 768px) {
             .image-slider img {
                 height: 300px !important;
-                animation-duration: 15s; /* Slightly faster on mobile */
-            }
-        }
-        }
-            .image-slider img {
-                height: 300px !important; /* Ensure mobile images match desktop size */
-            }
-            .image-slider img {
-                height: 300px; /* Ensure mobile images match desktop size */
-            }
-            .image-slider img {
-                height: 300px; /* Ensure mobile images match desktop size */
-                animation-duration: 15s; /* Slightly faster on mobile */
-            } /* Slightly faster on mobile */ /* Slightly faster on mobile */
+                animation-duration: 15s;
             }
         }
         footer {
@@ -143,21 +104,6 @@
             bottom: 0;
             text-align: center;
             overflow: hidden;
-        }
-        @media screen and (max-width: 768px) {
-            h1 {
-                font-size: 2em;
-            }
-            .contract-address {
-                font-size: 1em;
-            }
-            .copy-btn {
-                font-size: 0.9em;
-                padding: 6px 10px;
-            }
-            .image-slider img {
-                height: 100px;
-            }
         }
     </style>
     <script>
