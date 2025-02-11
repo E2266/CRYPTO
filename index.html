@@ -58,6 +58,10 @@
             padding: 20px;
             margin-top: 30px;
         }
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
         .image-slider {
             width: 100%;
             overflow: hidden;
@@ -66,20 +70,21 @@
             position: relative;
             display: flex;
             justify-content: flex-start;
+            gap: 20px;
         }
         .image-slider img {
             height: 150px;
             width: auto;
-            margin: 0 10px;
+            margin: 0;
             display: block;
             animation: scrollImages 10s linear infinite;
         }
         @keyframes scrollImages {
             0% {
-                transform: translateX(100%);
+                transform: translateX(100vw);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-100vw);
             }
         }
         footer {
