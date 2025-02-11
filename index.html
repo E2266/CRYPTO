@@ -71,12 +71,11 @@
             position: relative;
             display: flex;
             justify-content: flex-start;
-            gap: 20px;
             white-space: nowrap;
         }
         .image-slider img {
-            height: 300px;
-            width: auto;
+            height: 300px !important;
+            width: auto !important;
             margin: 0;
             display: inline-block;
             animation: scrollImages 20s linear infinite;
@@ -88,8 +87,12 @@
         }
         @keyframes scrollImages {
             0% {
-                transform: translateX(100%);
+                transform: translateX(100vw);
             }
+            100% {
+                transform: translateX(-100vw);
+            }
+        }
             100% {
                 transform: translateX(-100%);
             }
