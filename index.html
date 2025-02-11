@@ -74,8 +74,8 @@
             gap: 20px;
         }
         .image-slider img {
-            height: 300px !important;
-            width: auto !important;
+            height: 300px;
+            width: auto;
             margin: 0;
             display: block;
             animation: scrollImages 20s linear infinite;
@@ -89,6 +89,10 @@
             0% {
                 transform: translateX(100vw);
             }
+            100% {
+                transform: translateX(-100vw);
+            }
+        }
             100% {
                 transform: translateX(-100vw);
             }
