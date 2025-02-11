@@ -12,6 +12,7 @@
             text-align: center;
             background-color: #ffffff;
             color: #d4edda;
+            overflow-x: hidden;
         }
         header {
             background: #28a745;
@@ -24,14 +25,6 @@
         }
         section {
             padding: 20px;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #1e3a1e;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(40, 167, 69, 0.7);
         }
         .contract-section {
             background: #000000;
@@ -60,19 +53,6 @@
         .copy-btn:hover {
             background: #218838;
         }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .social-links a {
-            text-decoration: none;
-        }
-        .social-links img {
-            width: 30px;
-            height: 30px;
-        }
         .social-links-container {
             background: #f0f0f0;
             padding: 20px;
@@ -81,24 +61,24 @@
         .image-slider {
             width: 100%;
             overflow: hidden;
-            white-space: nowrap;
             background: #ddd;
             padding: 20px 0;
             position: relative;
             display: flex;
-            animation: scrollImages 10s linear infinite;
+            justify-content: flex-start;
         }
         .image-slider img {
             height: 150px;
             width: auto;
             margin: 0 10px;
             display: block;
+            animation: scrollImages 10s linear infinite;
         }
         @keyframes scrollImages {
-            from {
+            0% {
                 transform: translateX(100%);
             }
-            to {
+            100% {
                 transform: translateX(-100%);
             }
         }
