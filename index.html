@@ -60,7 +60,8 @@
         }
         .social-links img {
             width: 30px;
-            height: 30px;
+            height: auto;
+            aspect-ratio: 1 / 1;
         }
         .image-slider {
             width: 100%;
@@ -87,13 +88,29 @@
                 transform: translateX(-100vw);
             }
         }
+        
+        .image-slider img {
+            height: 150px;
+            width: auto;
+            margin: 0;
+            display: block;
+            animation: scrollImages 20s linear infinite; /* Slower animation */
+        }
+        
+        @media screen and (max-width: 768px) {
+            .image-slider img {
+                animation-duration: 15s; /* Slightly faster on mobile */
+            }
+        }
         footer {
             background: #28a745;
             color: white;
             padding: 10px;
             position: relative;
-            width: 100%;
+            width: 100vw;
             bottom: 0;
+            text-align: center;
+            overflow: hidden;
         }
         @media screen and (max-width: 768px) {
             h1 {
