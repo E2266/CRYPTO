@@ -10,11 +10,11 @@
             margin: 0;
             padding: 0;
             text-align: center;
-            background-color: #1a1a1a;
-            color: #f4f4f4;
+            background-color: #0d1b0d;
+            color: #d4edda;
         }
         header {
-            background: #ff9800;
+            background: #28a745;
             color: white;
             padding: 20px;
         }
@@ -28,13 +28,53 @@
         .container {
             max-width: 800px;
             margin: auto;
-            background: #333;
+            background: #1e3a1e;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 152, 0, 0.7);
+            box-shadow: 0 0 15px rgba(40, 167, 69, 0.7);
+        }
+        .contract-section {
+            background: #000000;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto;
+            width: fit-content;
+            box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+            color: #ffffff;
+        }
+        .contract-address {
+            font-size: 1.2em;
+            font-weight: bold;
+            word-break: break-all;
+        }
+        .copy-btn {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .copy-btn:hover {
+            background: #218838;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .social-links a {
+            text-decoration: none;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
         }
         footer {
-            background: #ff9800;
+            background: #28a745;
             color: white;
             padding: 10px;
             position: fixed;
@@ -42,12 +82,34 @@
             bottom: 0;
         }
     </style>
+    <script>
+        function copyToClipboard() {
+            const address = document.getElementById("contractAddress").innerText;
+            navigator.clipboard.writeText(address).then(() => {
+                alert("Contract address copied to clipboard!");
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>$CRYPTO</h1>
         <p>There's a ticker for bitcoin but not crypto, make that make sense... $CRYPTO is the people's coin. Just wait until you can flex that $CRYPTO changed your life</p>
     </header>
+    
+    <section class="contract-section">
+        <p class="contract-address" id="contractAddress">Contract Address: 9huESYrXtsdx4gGLHxrSZ9Uta3sN2SKZUYux5ZVpump</p>
+        <button class="copy-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+        <div class="social-links">
+            <a href="https://t.me/yourtelegramlink" target="_blank">
+                <img src="assets/telegram.png" alt="Telegram">
+            </a>
+            <a href="https://twitter.com/yourxlink" target="_blank">
+                <img src="assets/x.png" alt="X">
+            </a>
+        </div>
+    </section>
+    
     <footer>
         <p>&copy; 2024 Your Name</p>
     </footer>
